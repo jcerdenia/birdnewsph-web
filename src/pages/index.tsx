@@ -41,9 +41,7 @@ export default function Home({ articles }: Props) {
         <h3>
           <strong>PH Bird News</strong>
         </h3>
-        <p className="mt-3">
-          The The Latest Birding Reports from the Philippines
-        </p>
+        <p className="mt-3">The Latest Birding Reports from the Philippines</p>
       </header>
 
       <main>
