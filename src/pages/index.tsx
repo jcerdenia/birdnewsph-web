@@ -3,7 +3,6 @@ import type { ArticleHead } from "@/lib/types";
 import { phDate } from "@/lib/utils";
 import Link from "next/link";
 import Layout from "@/components/layout";
-import "../styles/globals.css";
 
 interface Props {
   articles: ArticleHead[];
