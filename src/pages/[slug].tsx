@@ -47,7 +47,14 @@ export default function Article({ article }: Props) {
   }
 
   return (
-    <Layout metadata={{ title: article.title }}>
+    <Layout
+      metadata={{
+        title: article.title,
+        description:
+          "PH Bird News: Latest Birding Reports from the Philippines",
+        metaType: "article",
+      }}
+    >
       <header>
         <p style={{ color: "unset", textDecoration: "none" }}>
           <span>

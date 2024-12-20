@@ -39,6 +39,8 @@ export default function Home({ articles }: Props) {
     <Layout
       metadata={{
         title: `${title}: ${description}`,
+        description: description,
+        metaType: "website",
       }}
     >
       <header>
