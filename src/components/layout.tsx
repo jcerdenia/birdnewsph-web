@@ -33,7 +33,7 @@ export default function Layout({ metadata, children }: Props) {
         />
       </Head>
       <div className="container my-4">{children}</div>
-      <footer className="my-4 pt-4 d-flex justify-content-center align-items-center">
+      <footer className="my-4 pt-4 d-flex justify-content-center align-items-center flex-column text-center">
         <p>
           <a
             property="dct:title"
@@ -47,7 +47,7 @@ export default function Layout({ metadata, children }: Props) {
             href="https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1"
             target="_blank"
             rel="license noopener noreferrer"
-            style={{ display: "inline-block" }}
+            className="d-inline-flex align-items-center"
           >
             CC0 1.0 Universal
             <Image
