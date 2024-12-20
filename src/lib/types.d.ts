@@ -9,5 +9,6 @@ export interface ArticleHead {
 
 export interface Article extends ArticleHead {
   body: PortableTextBlock[];
+  tags: string[];
   source: string;
 }

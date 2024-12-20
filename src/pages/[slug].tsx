@@ -28,6 +28,7 @@ export async function getServerSideProps(
       _createdAt,
       title,
       body,
+      tags,
       source,
     }`,
     { slug: context.params?.slug }
@@ -48,13 +49,18 @@ export default function Article({ article }: Props) {
   return (
     <Layout metadata={{ title: article.title }}>
       <header>
-        <h3>
+        <p style={{ color: "unset", textDecoration: "none" }}>
+          <span>
+            <Link href="/">PH Bird News</Link> / {article.tags[0]}
+          </span>
+        </p>
+        <h3 className="mt-4">
           <strong>{article.title}</strong>
         </h3>
       </header>
 
       <main>
-        <p className="mt-3">
+        <p className="mt-4">
           Published:{" "}
           {phDate({
             dateStyle: "full",
@@ -62,24 +68,26 @@ export default function Article({ article }: Props) {
           }).format(new Date(article._createdAt))}
         </p>
 
-        {article.body.map((b, i) => (
-          <div key={i}>
-            <PortableText value={b} />
-          </div>
-        ))}
+        <section className="mt-4">
+          {article.body.map((b, i) => (
+            <div key={i}>
+              <PortableText value={b} />
+            </div>
+          ))}
+        </section>
       </main>
 
-      <footer>
-        <p>
+      <section>
+        <p className="mt-4">
           <a href={article.source} target="_blank" rel="noopener noreferrer">
-            <strong>View eBird List</strong>
+            View eBird List
           </a>
         </p>
 
-        <Link href="/">
-          <strong>Home</strong>
+        <Link className="mt-4" href="/">
+          Home
         </Link>
-      </footer>
+      </section>
     </Layout>
   );
 }

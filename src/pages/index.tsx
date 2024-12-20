@@ -3,6 +3,7 @@ import type { ArticleHead } from "@/lib/types";
 import { phDate } from "@/lib/utils";
 import Link from "next/link";
 import Layout from "@/components/layout";
+import Image from "next/image";
 
 interface Props {
   articles: ArticleHead[];
@@ -31,29 +32,46 @@ export async function getServerSideProps(): Promise<ServerSideProps> {
 }
 
 export default function Home({ articles }: Props) {
+  const title = "PH Bird News";
+  const description = "Latest Birding Reports from the Philippines";
+
   return (
     <Layout
       metadata={{
-        title: "PH Bird News: The Latest Birding Reports from the Philippines",
+        title: `${title}: ${description}`,
       }}
     >
       <header>
         <h3>
-          <strong>PH Bird News</strong>
+          <Link
+            className="title d-flex align-items-center"
+            style={{ color: "unset", textDecoration: "none" }}
+            href="/"
+          >
+            <Image
+              className="me-2"
+              src="/logo.png"
+              alt=""
+              height={24}
+              width={24}
+            />
+            {title}
+          </Link>
         </h3>
-        <p className="mt-3">The Latest Birding Reports from the Philippines</p>
+        <p className="mt-3">{description}</p>
+        <hr className="custom-hr" />
       </header>
 
       <main>
         <p>{phDate({ dateStyle: "full" }).format(new Date())}</p>
 
-        <ul>
+        <section>
           {articles.map((a) => (
-            <li className="my-1" key={a._id}>
+            <div className="my-3" key={a._id}>
               <Link href={a.slug}>{a.title}</Link>
-            </li>
+            </div>
           ))}
-        </ul>
+        </section>
       </main>
     </Layout>
   );
