@@ -2,6 +2,6 @@
   publish = ".next"
 
 [[redirects]]
-  from = "/"
+  from = "https://birdnews.xyz"
   to = "https://ph.birdnews.xyz"
   status = 302
