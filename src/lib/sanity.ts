@@ -19,6 +19,19 @@ export const QUERY = {
       slug,
     }
   `,
+  // Get articles published in the last 72 hours by tag
+  taggedArticles: `
+    *[
+      _type == "article"
+      && dateTime(_createdAt) > dateTime(now()) - 60*60*72
+      && $tags[0] in tags
+    ] | order(_createdAt desc) {
+      _id,
+      _createdAt,
+      title,
+      slug,
+    }
+  `,
   // Get article by slug
   article: `
     *[_type == "article" && slug == $slug][0]{

@@ -53,13 +53,13 @@ export default function Article({ article }: Props) {
       </h3>
 
       <main>
-        <p className="mt-4">
+        <div className="mt-4">
           Published:{" "}
           {phDate({
             dateStyle: "full",
             timeStyle: "full",
           }).format(new Date(article._createdAt))}
-        </p>
+        </div>
 
         <section className="mt-4">
           {article.body.map((b, i) => (

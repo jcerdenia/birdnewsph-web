@@ -20,8 +20,8 @@ export default function Header({ title, description, logo }: Props) {
           {title}
         </Link>
       </h3>
-      <p className="mt-3">{description}</p>
-      <hr className="custom-hr" />
+      <div className="mt-4">{description}</div>
+      <hr className="mt-4 custom-hr" />
     </header>
   );
 }

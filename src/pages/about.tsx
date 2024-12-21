@@ -13,7 +13,7 @@ export default function About() {
       }}
       hasFooter={false}
     >
-      <Breadcrumb head={site.title} item={"About"} />
+      <Breadcrumb head={site.title} item={"About"} linked={false} />
       <h3 className="mt-4">
         <strong>About</strong>
       </h3>

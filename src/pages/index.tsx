@@ -33,8 +33,11 @@ export default function Home({ articles }: Props) {
     >
       <Header {...site} />
       <main>
-        <div>{phDate({ dateStyle: "full" }).format(new Date())}</div>
-        <Articles articles={articles} />
+        <div className="mt-4">
+          {phDate({ dateStyle: "full" }).format(new Date())}
+        </div>
+
+        <Articles className="mt-4" articles={articles} />
       </main>
     </Layout>
   );
