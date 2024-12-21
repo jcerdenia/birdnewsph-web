@@ -2,9 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
+  const iconSize = 16;
+
   return (
     <footer className="my-4 p-4 d-flex justify-content-center align-items-center flex-column text-center">
-      <div>
+      <div className="small">
         <a
           property="dct:title"
           rel="cc:attributionURL"
@@ -25,16 +27,16 @@ export default function Footer() {
             style={{ verticalAlign: "text-bottom" }}
             src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
             alt=""
-            height={18}
-            width={18}
+            height={iconSize}
+            width={iconSize}
           />
           <Image
             className="ms-1"
             style={{ verticalAlign: "text-bottom" }}
             src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1"
             alt=""
-            height={18}
-            width={18}
+            height={iconSize}
+            width={iconSize}
           />
         </a>
       </div>
