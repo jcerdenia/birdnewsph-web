@@ -1,0 +1,7 @@
+[build]
+  publish = ".next"
+
+[[redirects]]
+  from = "/"
+  to = "https://ph.birdnews.xyz"
+  status = 302
