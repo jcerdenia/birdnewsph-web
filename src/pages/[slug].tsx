@@ -1,9 +1,11 @@
-import client from "@/lib/sanity";
+import Breadcrumb from "@/components/breadcrumb";
+import Layout from "@/components/layout";
+import Links from "@/components/links";
+import site from "@/data/site";
+import client, { QUERY } from "@/lib/sanity";
 import type { Article } from "@/lib/types";
 import { phDate } from "@/lib/utils";
 import { PortableText } from "next-sanity";
-import Link from "next/link";
-import Layout from "@/components/layout";
 
 interface Props {
   article: Article | null;
@@ -20,51 +22,34 @@ interface Context {
 }
 
 export async function getServerSideProps(
-  context: Context
+  context: Context,
 ): Promise<ServerSideProps> {
-  const article: Article | null = await client.fetch(
-    `*[_type == "article" && slug == $slug][0]{
-      _id,
-      _createdAt,
-      title,
-      body,
-      tags,
-      source,
-    }`,
-    { slug: context.params?.slug }
-  );
-
   return {
     props: {
-      article,
+      article: await client.fetch(QUERY.article, {
+        slug: context.params?.slug,
+      }),
     },
   };
 }
 
 export default function Article({ article }: Props) {
   if (!article) {
-    return <div className="error">Article not found.</div>;
+    return <div>Article not found.</div>;
   }
 
   return (
     <Layout
       metadata={{
         title: article.title,
-        description:
-          "PH Bird News: Latest Birding Reports from the Philippines",
+        description: `${site.title}: ${site.description}`,
         metaType: "article",
       }}
     >
-      <header>
-        <p style={{ color: "unset", textDecoration: "none" }}>
-          <span>
-            <Link href="/">PH Bird News</Link> / {article.tags[0]}
-          </span>
-        </p>
-        <h3 className="mt-4">
-          <strong>{article.title}</strong>
-        </h3>
-      </header>
+      <Breadcrumb head={site.title} item={article.tags[0]} />
+      <h3 className="mt-4">
+        <strong>{article.title}</strong>
+      </h3>
 
       <main>
         <p className="mt-4">
@@ -84,17 +69,7 @@ export default function Article({ article }: Props) {
         </section>
       </main>
 
-      <section>
-        <p className="mt-4">
-          <a href={article.source} target="_blank" rel="noopener noreferrer">
-            View eBird List
-          </a>
-        </p>
-
-        <Link className="mt-4" href="/">
-          Home
-        </Link>
-      </section>
+      <Links checklistUrl={article.source} />
     </Layout>
   );
 }
