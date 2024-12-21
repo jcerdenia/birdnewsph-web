@@ -55,6 +55,10 @@ a:hover {
   border-radius: 2px; /* Smoothen the edges */
 }
 
+.font-italic {
+  font-style: italic;
+}
+
 /* 1024 and above */
 @media screen and (min-width: 1024px) {
   .container {
