@@ -34,7 +34,7 @@ export default function About() {
         </p>
         <p>
           I hope the site becomes a fun way to stay up-to-date on goings-on in
-          the small birding world of the Philippines and encourage more eBird
+          the small birding world of the Philippines and encourages more eBird
           submissions.
         </p>
         <p>
