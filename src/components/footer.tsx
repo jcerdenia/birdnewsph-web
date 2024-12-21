@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="my-4 pt-4 d-flex justify-content-center align-items-center flex-column text-center">
-      <p>
+    <footer className="my-4 p-4 d-flex justify-content-center align-items-center flex-column text-center">
+      <div>
         <a
           property="dct:title"
           rel="cc:attributionURL"
@@ -37,11 +37,11 @@ export default function Footer() {
             width={18}
           />
         </a>
-      </p>
+      </div>
 
-      <Link className="pb-4" href="/about">
-        About
-      </Link>
+      <span>
+        <Link href="/about">About</Link>
+      </span>
     </footer>
   );
 }
