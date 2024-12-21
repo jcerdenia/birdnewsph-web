@@ -24,26 +24,28 @@ export default function About() {
 
       <main className="mt-4">
         <p>
-          <strong>PH Bird News</strong> is a fully automated AI-powered news
-          feed of birding reports from the Philippines, updated hourly using the
-          latest public data from <a href="https://ebird.org/">eBird</a>.
+          <strong>PH Bird News</strong> is a fully automated artificial
+          intelligence-powered news feed bringing you the latest birding reports
+          from around the Philippines, updated hourly and driven by public data
+          from <a href="https://ebird.org/">eBird</a>.
         </p>
         <p>
-          AI being what it is, inaccuracies and embellishments are inevitable,
-          but hopefully amusing. To mitigate this, articles are ephemeral and
-          stay published for only 72 hours.
+          Generative AI being what it is, inaccuracies and embellishments are
+          inevitable but hopefully amusing. To mitigate this, articles are
+          ephemeral and stay live for only 72 hours.
         </p>
         <p>
-          My hope is that it becomes a fun way to stay up-to-date on goings-on
-          in the small birding world of the Philippines and encourage more eBird
+          I hope the site becomes a fun way to stay up-to-date on goings-on in
+          the small birding world of the Philippines and encourage more eBird
           submissions.
         </p>
         <p>
-          This project was built for my own amusement, but should it generate
-          enough interest, potential future improvements are:
+          This project was built firstly for my own amusement, but should it
+          generate enough interest from others, potential future improvements
+          are:
         </p>
         <ul>
-          <li>Human editors</li>
+          <li>Human editors and contributors</li>
           <li>Photos</li>
           <li>A newsletter</li>
         </ul>
@@ -51,6 +53,9 @@ export default function About() {
           If you like what you see or have any comments,{" "}
           <a href="mailto:joshua[at]cerdenia[dot]com">contact me</a>.
         </p>
+        <Link className="mt-4" href="/">
+          Home
+        </Link>
       </main>
     </Layout>
   );
