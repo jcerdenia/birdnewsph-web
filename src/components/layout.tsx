@@ -39,7 +39,7 @@ export default function Layout({
       </Head>
       <div className="container my-4">{children}</div>
 
-      {hasFooter ? <Footer /> : null}
+      {hasFooter ? <Footer /> : <div className="p-4" />}
     </div>
   );
 }

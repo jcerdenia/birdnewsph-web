@@ -20,17 +20,21 @@ export default function About() {
 
       <main className="mt-4">
         <p>
-          <strong>PH Bird News</strong> is a self-sustaining, fully automated
-          artificial intelligence-powered news feed bringing you the latest
-          birding reports from around the Philippines. Running daily from
-          morning to midnight, articles are published by the hour and driven by
-          public data from <a href="https://ebird.org/">eBird</a>, an online
-          database of bird distribution and abundance.
+          <strong>From the Creator</strong>
+        </p>
+        <p>
+          PH Bird News is a self-sustaining, fully automated artificial
+          intelligence-powered news feed bringing you the latest birding reports
+          from around the Philippines. Running daily from morning to midnight,
+          articles are published hourly and driven by public data from{" "}
+          <a href="https://ebird.org/">eBird</a>, an online database of bird
+          distribution and abundance.
         </p>
         <p>
           Generative AI being what it is, inaccuracies and embellishments are
           inevitable but hopefully amusing. To mitigate this, articles are
-          ephemeral and stay publicly listed for only 72 hours.
+          ephemeral and stay publicly listed for only 72 hours. I am always
+          experimenting to get the best possible results from the AI model.
         </p>
         <p>
           I hope the site becomes a fun way to stay up-to-date on goings-on in
