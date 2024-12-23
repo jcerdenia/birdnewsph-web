@@ -23,10 +23,10 @@ export default function About() {
           <strong>From the Creator</strong>
         </p>
         <p>
-          PH Bird News is a self-sustaining, fully automated artificial
-          intelligence-powered news feed bringing you the latest birding reports
-          from around the Philippines. Running daily from morning to midnight,
-          articles are published hourly and driven by public data from{" "}
+          PH Bird News is a fully automated artificial intelligence-powered news
+          feed bringing you the latest birding reports from around the
+          Philippines. Running daily from morning to midnight, articles are
+          published hourly and driven by public data from{" "}
           <a href="https://ebird.org/">eBird</a>, an online database of bird
           distribution and abundance.
         </p>
@@ -47,7 +47,7 @@ export default function About() {
           future improvements are:
         </p>
         <ul>
-          <li>Human editors and/or contributors</li>
+          <li>Human editors</li>
           <li>Photos</li>
           <li>An email newsletter</li>
         </ul>

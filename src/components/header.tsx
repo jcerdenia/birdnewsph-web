@@ -21,7 +21,6 @@ export default function Header({ title, description, logo }: Props) {
         </Link>
       </h3>
       <div className="mt-4">{description}</div>
-      <hr className="mt-4 custom-hr" />
     </header>
   );
 }

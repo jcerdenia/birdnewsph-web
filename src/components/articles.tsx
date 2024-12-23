@@ -10,7 +10,7 @@ export default function Articles({ className, articles }: Props) {
   return (
     <section className={className}>
       {articles.map((a) => (
-        <div className="my-3" key={a._id}>
+        <div className="my-4" key={a._id}>
           <Link href={a.slug}>{a.title}</Link>
         </div>
       ))}
