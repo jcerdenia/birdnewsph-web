@@ -39,6 +39,12 @@ a:hover {
   color: darken(var(--accent), 15%);
 }
 
+.cc-license {
+  color: inherit !important;
+  transition: none !important;
+  text-decoration: none !important;
+}
+
 .container {
   animation: fadeIn 0.5s ease-in-out;
 }

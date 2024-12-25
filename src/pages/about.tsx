@@ -49,7 +49,6 @@ export default function About() {
         <ul>
           <li>Human editors</li>
           <li>Photos</li>
-          <li>An email newsletter</li>
         </ul>
         <p>
           If you like what you see or have any comments,{" "}

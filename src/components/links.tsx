@@ -1,3 +1,4 @@
+import site from "@/data/site";
 import Link from "next/link";
 
 interface Props {
@@ -14,6 +15,10 @@ export default function Links({ checklistUrl }: Props) {
           </a>
         </div>
       ) : null}
+
+      <div className="mt-4">
+        <a href={site.subscribeUrl}>Sign up for Email Updates</a>
+      </div>
 
       <div className="mt-4">
         <Link href="/">Home</Link>
