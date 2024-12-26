@@ -2,9 +2,10 @@ import Link from "next/link";
 
 interface Props {
   checklistUrl?: string;
+  exclude?: string[];
 }
 
-export default function Links({ checklistUrl }: Props) {
+export default function Links({ checklistUrl, exclude = [] }: Props) {
   return (
     <section>
       {checklistUrl ? (
@@ -15,9 +16,11 @@ export default function Links({ checklistUrl }: Props) {
         </div>
       ) : null}
 
-      <div className="mt-4">
-        <Link href="/subscribe">Sign Up for Email Updates</Link>
-      </div>
+      {!exclude.includes("subscribe") ? (
+        <div className="mt-4">
+          <Link href="/subscribe">Sign Up for Email Updates</Link>
+        </div>
+      ) : null}
 
       <div className="mt-4">
         <Link href="/">Home</Link>

@@ -1,4 +1,3 @@
-import site from "@/data/site";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -48,9 +47,9 @@ export default function Footer() {
           About
         </Link>{" "}
         |{" "}
-        <a className="mx-1" href={site.subscribeUrl}>
+        <Link className="mx-1" href="/subscribe">
           Subscribe
-        </a>
+        </Link>
       </span>
     </footer>
   );
