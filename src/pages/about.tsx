@@ -2,6 +2,7 @@ import Breadcrumb from "@/components/breadcrumb";
 import Layout from "@/components/layout";
 import Links from "@/components/links";
 import site from "@/data/site";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -32,6 +33,11 @@ export default function About() {
         </p>
 
         <p>
+          An <Link href="/subscribe">email digest</Link> is sent to subscribers{" "}
+          daily at noon.
+        </p>
+
+        <p>
           <strong>Disclaimers and Attributions</strong>
         </p>
         <p>
@@ -58,9 +64,9 @@ export default function About() {
             eBird Data Access Terms of Use
           </a>
           , this project&apos;s is a legitimate use case. However, it is not
-          endorsed by eBird in any way. I welcome all feedback regarding
-          regarding this project&apos;s use of data to ensure accordance with
-          eBird&apos;s latest terms.
+          endorsed by eBird in any way. I welcome all feedback regarding this
+          project&apos;s use of data to ensure accordance with eBird&apos;s
+          latest terms.
         </p>
         <p>
           Finally, generative AI being what it is, inaccuracies and whimsical
@@ -89,7 +95,7 @@ export default function About() {
           <li>Photos</li>
         </ul>
         <p>
-          The site is currently in a &quot;public beta&quot; phase and
+          The site is currently in a &quot;semi-public beta&quot; phase and
           discourages search engines from indexing it.
         </p>
         <p>
