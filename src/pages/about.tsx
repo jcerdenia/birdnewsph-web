@@ -31,10 +31,11 @@ export default function About() {
           distribution and abundance.
         </p>
         <p>
-          Generative AI being what it is, inaccuracies and embellishments are
-          inevitable but hopefully amusing. To mitigate this, articles are
-          ephemeral and stay publicly listed for only 72 hours. I am always
-          experimenting to get the best possible results from the AI model.
+          Generative AI being what it is, errors, inaccuracies, and
+          embellishments are inevitable but hopefully amusing. To mitigate this,
+          articles are ephemeral and stay publicly listed for only 72 hours. I
+          am always experimenting to get the best possible results from the AI
+          model.
         </p>
         <p>
           I hope the site becomes a fun way to stay up-to-date on goings-on in
