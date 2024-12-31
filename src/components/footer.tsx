@@ -51,6 +51,10 @@ export default function Footer() {
           Subscribe
         </Link>
       </span>
+
+      <a className="mt-4" href="https://groq.com">
+        <Image width={150} height={20} src="/pbg.svg" alt="Powered by Groq" />
+      </a>
     </footer>
   );
 }
