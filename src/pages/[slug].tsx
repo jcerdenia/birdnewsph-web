@@ -2,6 +2,7 @@ import Attribution from "@/components/attribution";
 import Breadcrumb from "@/components/breadcrumb";
 import Layout from "@/components/layout";
 import Links from "@/components/links";
+import NotFound from "@/components/notfound";
 import site from "@/data/site";
 import client, { QUERY } from "@/lib/sanity";
 import type { Article } from "@/lib/types";
@@ -9,7 +10,7 @@ import { phDate } from "@/lib/utils";
 import { PortableText } from "next-sanity";
 
 interface Props {
-  article: Article | null;
+  article: Article;
 }
 
 interface ServerSideProps {
@@ -35,8 +36,8 @@ export async function getServerSideProps(
 }
 
 export default function Article({ article }: Props) {
-  if (!article) {
-    return <div>Article not found.</div>;
+  if (!article.title) {
+    return <NotFound />;
   }
 
   return (
