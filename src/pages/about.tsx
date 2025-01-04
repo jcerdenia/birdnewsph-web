@@ -12,7 +12,6 @@ export default function About() {
         description: site.description,
         metaType: "article",
       }}
-      hasFooter={false}
     >
       <Breadcrumb head={site.title} item={"About"} linked={false} />
       <h3 className="mt-4">

@@ -53,6 +53,10 @@ a:hover {
   font-style: italic;
 }
 
+.main {
+  min-height: calc(100vh - 14.5rem);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

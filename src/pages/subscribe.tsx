@@ -14,7 +14,6 @@ export default function Subscribe() {
         description: site.description,
         metaType: "website",
       }}
-      hasFooter={false}
     >
       <Breadcrumb head={site.title} item={"Subscribe"} linked={false} />
       <h3 className="mt-4">

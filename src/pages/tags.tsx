@@ -45,7 +45,6 @@ export default function Tags({ tag, articles }: Props) {
         description: `${site.title}: ${site.description}`,
         metaType: "website",
       }}
-      hasFooter={false}
     >
       <Breadcrumb head={site.title} item={tag} />
 

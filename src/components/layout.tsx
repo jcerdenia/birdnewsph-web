@@ -37,7 +37,7 @@ export default function Layout({
           content="https://ph.birdnews.xyz/egret.jpeg"
         />
       </Head>
-      <div className="container my-4">{children}</div>
+      <div className="main container my-4">{children}</div>
 
       {hasFooter ? <Footer /> : <div className="p-4" />}
     </div>
