@@ -9,21 +9,24 @@ const client = createClient({
 });
 
 export const QUERY = {
-  // Get articles published in the last 72 hours
+  // Get articles published in the last 72 hours to date
   articles: `
-    *[_type == "article" && dateTime(_createdAt) > dateTime(now()) - 60*60*72]
-    | order(_createdAt desc) {
+    *[_type == "article"
+      && dateTime(_createdAt) >= dateTime($date) - 60*60*72 
+      && dateTime(_createdAt) < dateTime($date)
+    ] | order(_createdAt desc) {
       _id,
       _createdAt,
       title,
       slug,
     }
   `,
-  // Get articles published in the last 72 hours by tag
+  // Get articles published in the last 72 hours to date
   taggedArticles: `
     *[
       _type == "article"
-      && dateTime(_createdAt) > dateTime(now()) - 60*60*72
+      && dateTime(_createdAt) >= dateTime($date) - 60*60*72
+      && dateTime(_createdAt) < dateTime($date)
       && $tags[0] in tags
     ] | order(_createdAt desc) {
       _id,

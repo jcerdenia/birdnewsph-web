@@ -45,10 +45,9 @@ export default function About() {
         </p>
         <p>
           Generative AI being what it is, inaccuracies and whimsical
-          embellishments are inevitable but hopefully benign and amusing. To
-          mitigate this, articles are ephemeral and stay publicly listed for
-          only 72 hours. I am always experimenting to get the best possible
-          results from the AI model.
+          embellishments are inevitable but hopefully benign and amusing.I am
+          always experimenting to get the best possible results from the AI
+          model.
         </p>
         <p>
           I hope the site becomes a fun way to stay up-to-date on goings-on in
