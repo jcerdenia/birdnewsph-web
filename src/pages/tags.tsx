@@ -28,7 +28,6 @@ export async function getServerSideProps(
       tag: context.query.name,
       articles: await client.fetch(QUERY.taggedArticles, {
         tags: [context.query.name],
-        date: new Date("2025-01-31T23:59:00+08:00").toISOString(),
       }),
     },
   };

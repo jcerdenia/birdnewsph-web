@@ -17,9 +17,7 @@ interface ServerSideProps {
 export async function getServerSideProps(): Promise<ServerSideProps> {
   return {
     props: {
-      articles: await client.fetch(QUERY.articles, {
-        date: new Date("2025-01-31T23:59:00+08:00").toISOString(),
-      }),
+      articles: await client.fetch(QUERY.articles),
     },
   };
 }
@@ -37,10 +35,6 @@ export default function Home({ articles }: Props) {
       <main>
         <div className="mt-4">
           {phDate({ dateStyle: "full" }).format(new Date())}
-        </div>
-
-        <div className="mt-4 alert alert-light" role="alert">
-          This site is currently paused to free up resources for other projects.
         </div>
 
         <Articles className="mt-4" articles={articles} />
